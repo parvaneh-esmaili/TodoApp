@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NoteModel } from '../../../../-models/note.model';
+import { NoteModel } from '../../../../_models/note.model';
 import { NgFor } from '@angular/common';
 
 @Component({
@@ -19,6 +19,5 @@ notesList:NoteModel [] = [
 deleteNote(id: number) {
   var index = this.notesList.findIndex(x => x.id === id)
   this.notesList.splice(index,1)
-};
-
+  };
 }
